@@ -1,7 +1,7 @@
 <template>
   <div class="about-product">
     <div class="about-product__content">
-      <div class="about-product__content-title">
+      <div class="about-product__content-title" id="about-product">
         Про товар
       </div>
       <div class="about-product__content-description">
@@ -12,8 +12,7 @@
       </div>
     </div>
     <div class="about-product__image-wrapper">
-      <img :src="require('@/assets/AboutProductFirst.png')"/>
-      <img class="about-product__image" :src="require('@/assets/AboutProductSecond.png')"/>
+      <img :src="require('@/assets/AboutProductFirst.svg')"/>
     </div>
   </div>
 </template>
@@ -30,6 +29,7 @@ export default {
   }
 
   .about-product__content-title {
+    overflow-y: hidden;
     font-family: 'Raleway',sans-serif;
     font-style: normal;
     font-weight: 600;
@@ -43,6 +43,7 @@ export default {
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
+    line-height: 140%;
   }
 
   .about-product__image-wrapper {
@@ -56,5 +57,23 @@ export default {
 
   .about-product__image {
     margin-top: 20px;
+  }
+
+  @media (min-width: 1024px) {
+    .about-product {
+      margin: 150px 20px 0 20px;
+    }
+
+    .about-product__content-title {
+      font-size: 55px;
+    }
+
+    .about-product__content-description {
+      margin-top: 50px;
+    }
+
+    .about-product__image-wrapper {
+      flex: 1;
+    }
   }
 </style>

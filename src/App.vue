@@ -1,33 +1,97 @@
 <template>
   <div>
     <HeaderMobile />
+    <Slider />
     <MilitaryFirst />
     <AboutProduct />
     <WhyUs/>
+    <WhereFindUs/>
     <FooterMobile />
+
+    <div
+        class="sidebar"
+    >
+      <div class="sidebar__close-button" @click="closeMobileMenuBar">
+        <i class="fas fa-times" />
+      </div>
+
+      <MobileMainMenu />
+    </div>
   </div>
 </template>
 
 <script>
+import "@/vue3-carousel/vue3-carousel.sass";
 
 import HeaderMobile from "@/components/HeaderMobile";
+import Slider from "@/components/Slider";
 import MilitaryFirst from "@/components/MilitaryFirst";
 import AboutProduct from "@/components/AboutProduct";
 import WhyUs from "@/components/WhyUs";
-import FooterMobile from "@/components/FooterMobile";
+import Footer from "@/components/Footer";
+import WhereFindUs from "@/components/WhereFindUs";
+import MobileMainMenu from "@/components/MobileMainMenu";
+import {mapActions, mapState} from "vuex";
 export default {
   name: 'App',
   components: {
-    FooterMobile,
+    WhereFindUs,
+    FooterMobile: Footer,
     WhyUs,
     AboutProduct,
     MilitaryFirst,
-    HeaderMobile
+    HeaderMobile,
+    MobileMainMenu,
+    Slider,
+  },
+  computed: {
+    ...mapState("sidebars", [
+        "isMobileMenuBarVisible"
+    ]),
+  },
+  methods: {
+    ...mapActions("sidebars", ["closeMobileMenuBar", "closeMobileUserBar"]),
   }
 }
 </script>
 
 <style>
+  body > *{
+    word-break: break-word;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+.sidebar {
+  text-align: initial;
+  height: 100vh;
+  background-color: #F8F8F8;
+  position: absolute;
+  left: 200%;
+  right: 0%;
+  top: 0;
+  bottom: 0;
+  transition: all 0.5s;
+}
+
+.sidebar_opened {
+  left: 0;
+  right: 0;
+  position: fixed;
+}
+
+.is-sidebar-opened {
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+}
+
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -52,6 +116,7 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  overflow-x: hidden
 }
 
 /* make sure to set some focus styles for accessibility */

@@ -1,7 +1,8 @@
 .carousel
-  --vc-pgn-background-color: #0000FF
+  //--vc-pgn-background-color: #0000FF
   --vc-pgn-active-color: #FFFF00
   max-width: calc(100vw)
+  margin-top: 50px
 
   @media (min-width: 1024px)
     //max-width: unset
@@ -11,13 +12,27 @@
     width: 100%
 
   .carousel__pagination
-    //position: absolute
+    margin-top: 30px
 
   .carousel__prev
-    top: auto
+    //top: auto
+    background-color: #005BBB
+    margin-left: 40px
+    width: 40px
+    height: 40px
+
+    @media (max-width: 500px)
+      display: none
 
   .carousel__next
-    top: auto
+    //top: auto
+    background-color: #005BBB
+    margin-right: 40px
+    width: 40px
+    height: 40px
+
+    @media (max-width: 500px)
+      display: none
 
   .carousel__pagination
     //bottom: 0

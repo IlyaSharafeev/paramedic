@@ -12,14 +12,21 @@
       </div>
     </div>
     <div class="about-product__image-wrapper">
-      <img :src="require('@/assets/AboutProductFirst.svg')"/>
+      <div class="about-product__image">
+        <img :src="require('@/assets/AboutProductFirst.svg')"/>
+      </div>
+      <div class="about-product__image-wrapper-slider">
+        <Slider />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import Slider from "@/components/Slider";
 export default {
-  name: "AboutProduct"
+  name: "AboutProduct",
+  components: {Slider},
 }
 </script>
 
@@ -59,6 +66,11 @@ export default {
     margin-top: 20px;
   }
 
+  .about-product__image > img {
+    width: 100%;
+    height: 100%;
+  }
+
   @media (min-width: 1024px) {
     .about-product {
       margin: 150px 20px 0 20px;
@@ -74,6 +86,11 @@ export default {
 
     .about-product__image-wrapper {
       flex: 1;
+    }
+
+    .about-product__image {
+      max-width: 50%;
+      margin: 0 auto;
     }
   }
 </style>

@@ -1,7 +1,6 @@
 <template>
   <div>
     <HeaderMobile />
-    <Slider />
     <MilitaryFirst />
     <AboutProduct />
     <WhyUs/>
@@ -24,7 +23,6 @@
 import "@/vue3-carousel/vue3-carousel.sass";
 
 import HeaderMobile from "@/components/HeaderMobile";
-import Slider from "@/components/Slider";
 import MilitaryFirst from "@/components/MilitaryFirst";
 import AboutProduct from "@/components/AboutProduct";
 import WhyUs from "@/components/WhyUs";
@@ -42,7 +40,6 @@ export default {
     MilitaryFirst,
     HeaderMobile,
     MobileMainMenu,
-    Slider,
   },
   computed: {
     ...mapState("sidebars", [

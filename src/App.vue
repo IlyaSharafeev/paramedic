@@ -1,10 +1,14 @@
 <template>
   <div>
     <HeaderMobile />
-    <MilitaryFirst />
-    <AboutProduct />
-    <WhyUs/>
-    <WhereFindUs/>
+
+    <div class="wrapper">
+      <MilitaryFirst />
+      <AboutProduct />
+      <WhyUs/>
+      <WhereFindUs/>
+    </div>
+
     <FooterMobile />
 
     <div
@@ -57,6 +61,16 @@ export default {
     word-break: break-word;
     overflow-y: hidden;
     overflow-x: hidden;
+  }
+
+  .wrapper {
+    margin: 0 10px 0 10px;
+  }
+
+  @media (min-width: 1024px) {
+    .wrapper {
+      margin: 0 30px 0 30px;
+    }
   }
 
   a {

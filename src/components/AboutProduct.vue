@@ -69,6 +69,7 @@ export default {
   .about-product__image > img {
     width: 100%;
     height: 100%;
+    border-radius: 5%;
   }
 
   @media (min-width: 1024px) {
@@ -85,12 +86,22 @@ export default {
     }
 
     .about-product__image-wrapper {
-      flex: 1;
+      display: flex;
     }
 
     .about-product__image {
-      max-width: 50%;
-      margin: 0 auto;
+      flex: 1;
+      margin-top: 0;
     }
+
+    .about-product__image > img {
+      max-height: 450px;
+    }
+
+    .about-product__image-wrapper-slider {
+      flex: 1;
+    }
+
+
   }
 </style>

@@ -43,13 +43,13 @@ export default {
       },
       breakpoints: {
         1024: {
-          autoplay: 0,
+          autoplay: 5000,
           // wrapAround: false,
           // touchDrag: false,
           itemsToShow: 1,
         },
         320: {
-          autoplay: 0,
+          autoplay: 5000,
           itemsToShow: 1,
         }
       },

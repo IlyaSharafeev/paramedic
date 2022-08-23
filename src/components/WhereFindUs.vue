@@ -4,7 +4,7 @@
       <div class="where-find-us__content-title" id="where-find-us">Де нас знайти</div>
       <div class="where-find-us__content-description">
         Для того, щоб придбати наш товар, пишіть нам в <a href="https://www.instagram.com/paramedic.dp/" target="_blank">Instagram</a> або телефонуйте
-        <a href="https://www.instagram.com/paramedic.dp/" target="_blank">+380 (95) 693-75-79</a>
+        <a href="https://www.instagram.com/paramedic.dp/" target="_blank">+380506130068</a>
       </div>
     </div>
     <div class="where-find-us__video">
